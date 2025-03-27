@@ -1,13 +1,52 @@
+/* index.css */
+:root {
+  --color-primario: #2c3e50;
+  --color-secundario: #e74c3c;
+  --color-fondo: #f9f9f9;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, 
+    Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-fondo);
+  color: var(--color-primario);
+  line-height: 1.6;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Añadidos para e-commerce */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: var(--color-secundario);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* Responsive base */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-primario: #ecf0f1;
+    --color-secundario: #3498db;
+    --color-fondo: #2c3e50;
+  }
 }
